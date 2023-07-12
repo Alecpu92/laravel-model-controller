@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route :: get('/', function() {
+use App\Http\Controllers\MainController;
 
-    return view('home');
-});
+// Route :: get('/', function() {
+
+//     return view('home');
+// });
+Route :: get('/', [MainController :: class, 'index']);
